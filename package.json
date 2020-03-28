@@ -1,0 +1,11 @@
+{
+  "name": "knight-chess-webapp",
+  "version": "1.0.0",
+  "description": "A web application to users interact with the knight position and possible moves.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guilherme Borba",
+  "license": "ISC"
+}

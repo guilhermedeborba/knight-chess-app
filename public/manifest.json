@@ -1,0 +1,9 @@
+{
+  "short_name": "Knight Chess",
+  "name": "A chess board to test only knight moves",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

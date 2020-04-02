@@ -4,7 +4,7 @@ import Urls from '../config/constants/api-urls'
 import { get } from '../utils/http'
 
 const knight = 'wN'
-const activeCellStyle = { 
+const activeCellStyle = {
   border: `2px solid #000000`,
   borderRadius: '50px'
 }
@@ -17,8 +17,8 @@ class Board extends Component {
     squareStyles: {}
   }
 
-  setPosition = async ({ targetSquare }) => {
-    const response = await get(Urls.validCells.get(targetSquare.toUpperCase()))
+  setPosition = async position => {
+    const response = await get(Urls.validCells.get(position.toUpperCase()))
     const { validCells } = response.data
 
     const squareStyles = validCells.reduce((styles, cell) => {
@@ -28,7 +28,7 @@ class Board extends Component {
 
     this.setState({
       position: {
-        [targetSquare]: knight
+        [position]: knight
       },
       squareStyles
     })
@@ -39,17 +39,14 @@ class Board extends Component {
       <Chessboard
         id="knight-chess-board"
         draggable={true}
-        onDrop={this.setPosition}
+        onDrop={({ targetSquare }) => this.setPosition(targetSquare)}
+        dropSquareStyle={null}
         position={this.state.position}
+        onSquareClick={this.setPosition}
         squareStyles={this.state.squareStyles}
-        darkSquareStyle={{
-          backgroundColor: '#383838'
-        }}
-        lightSquareStyle={{
-          backgroundColor: '#ededed'
-        }}
         boardStyle={{
-          margin: 'auto',
+          border: '2px solid #000000',
+          margin: '30px auto',
           boxShadow: 'rgba(0, 0, 0, 0.2) 0px 12px 15px 0px, rgba(0, 0, 0, 0.2) 0px 12px 20px 0px'
         }}
       />

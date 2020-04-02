@@ -1,16 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: -webkit-gradient(linear, left top, left bottom, from(#95a1a3), to(#d9d9d9)) fixed;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 h1 {
@@ -21,3 +19,51 @@ h1 {
   text-align: center;
 }
 
+a i {
+  margin: 12px auto 12px;
+  padding: 5px 015px;
+  font-size: 2em;
+  color: #ffffff;
+  border: 2px solid black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2196f3), to(#84bce8));
+  transition: 1s;
+}
+
+a i:hover {
+  transform: rotate(8deg);
+}
+
+.link-label {
+  color: #000000;
+  background-color: #cccccc;
+  padding: 5px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+div.wizard-control {
+  width: 50%;
+  height: 100%;
+}
+
+.wizard-control button {
+  border: 2px solid black;
+  border-bottom: none;
+  width: 100%;
+  height:100%;
+  cursor: pointer; 
+}
+
+.wizard-control button:hover{
+  background: -webkit-gradient(linear, left top, left bottom, from(#2196f3), to(#84bce8));
+}
+
+.wizard-control button i {
+  font-size: 1.5em;
+}
+
+.btn-label { 
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 700;
+}

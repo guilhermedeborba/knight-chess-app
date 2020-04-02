@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Board from './components/Board' 
+import Router from './components/Router'
 
 import './index.css'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Board />
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
 )

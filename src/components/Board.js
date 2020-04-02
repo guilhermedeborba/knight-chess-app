@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import Chessboard, { Piece } from 'chessboardjsx'
+import { Link } from 'react-router-dom'
+import Chessboard from 'chessboardjsx'
+import IconLabel from './IconLabel'
 import Urls from '../config/constants/api-urls'
 import { get } from '../utils/http'
 
@@ -36,20 +38,28 @@ class Board extends Component {
 
   render() {
     return (
-      <Chessboard
-        id="knight-chess-board"
-        draggable={true}
-        onDrop={({ targetSquare }) => this.setPosition(targetSquare)}
-        dropSquareStyle={null}
-        position={this.state.position}
-        onSquareClick={this.setPosition}
-        squareStyles={this.state.squareStyles}
-        boardStyle={{
-          border: '2px solid #000000',
-          margin: '30px auto',
-          boxShadow: 'rgba(0, 0, 0, 0.2) 0px 12px 15px 0px, rgba(0, 0, 0, 0.2) 0px 12px 20px 0px'
-        }}
-      />
+      <div class="text-center">
+        <Link to="/">
+          <IconLabel iconName="question" label="Need help?" />
+        </Link>
+        <Chessboard
+          id="knight-chess-board"
+          draggable={true}
+          onDrop={({ targetSquare }) => this.setPosition(targetSquare)}
+          dropSquareStyle={null}
+          position={this.state.position}
+          onSquareClick={this.setPosition}
+          squareStyles={this.state.squareStyles}
+          boardStyle={{
+            border: '2px solid #000000',
+            margin: '0 auto',
+            boxShadow: `
+              rgba(0, 0, 0, 0.2) 0px 12px 15px 0px, 
+              rgba(0, 0, 0, 0.2) 0px 12px 20px 0px
+            `
+          }}
+        />
+      </div>
     )
   }
 }

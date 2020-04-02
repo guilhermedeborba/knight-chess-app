@@ -13,17 +13,17 @@ const imgStyle = {
 const WizardInstructions = () => (
   <Wizard>
     <div style={{ padding: '0 25px 0 25px' }}>
-      <h1>What this app stands for</h1>
+      <h1>Motivation</h1>
 
       <div style={{ textAlign: 'left' }}>
         <p>
-          <strong>Do you wanna win that match?</strong> Follow the instructions below and get to
-          know with 100% precision where your knight could be in <strong>2</strong> turns ahead.
+          <strong>Do you wanna win that Chess match? I will help you!</strong> Follow the instructions below and get to
+          know where your knight piece could be in <strong>2</strong> turns.
         </p>
 
         <p>
-          The knight is a chess piece that can only move in <strong>L</strong>, two steps
-          horizontally and one vertically or two vertically and 1 horizontally.
+          The knight is a chess piece that can only move in <strong>L-shape</strong>, 2 steps
+          horizontally and 1 vertically or 2 vertically and 1 horizontally.
         </p>
         <img style={imgStyle} src={`${Env.publicUrl}/chessboard-1.jpg`} />
       </div>
